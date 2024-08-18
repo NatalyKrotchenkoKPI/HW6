@@ -22,10 +22,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Start local server
-        run: |
-          npm run tern-on-api & 
-          sleep 30
+  - name: Start local server
+  run: |
+    npm run tern-on-api & 
+    while ! nc -z localhost 3000; do   
+      sleep 1 # wait for 1 second before check again
+    done
 
       - name: Install Newman
         run: npm install -g newman
