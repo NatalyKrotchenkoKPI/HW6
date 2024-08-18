@@ -24,7 +24,7 @@ jobs:
 
       - name: Start local server
         run: |
-          npm run start & 
+          npm run tern-on-api & 
           sleep 10
 
       - name: Install Newman
