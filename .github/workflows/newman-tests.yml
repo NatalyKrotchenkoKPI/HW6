@@ -27,4 +27,4 @@ jobs:
 
       - name: Run Postman tests
         run: |
-          newman run petstore.collection.json 
+          newman run store.collection.json 
